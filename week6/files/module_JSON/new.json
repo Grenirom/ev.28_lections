@@ -1,0 +1,7 @@
+{
+    "name": "John Snow",
+    "age": 24,
+    "Status": true,
+    "wife": false,
+    "children": null
+}
