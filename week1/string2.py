@@ -128,9 +128,9 @@
 # print(res)
 
 # 'connector'.join(list) -> соединяет по connector строки которые находились в list
-# text = 'helloworld my namedf no namy by name of myself'
-# res = text.split(' ')
-# print(res)
+text = 'helloworld my namedf no namy by name of myself'
+res = text.split(' ')
+print(res)
 # str1 = ' '.join(res)
 # print(str1)
 
@@ -163,5 +163,5 @@
 
 
 # print((1, 'a') > ('b', 2))
-print((1,-1,0) > (1,1))
-print(dir(str))
+# print((1,-1,0) > (1,1))
+# print(dir(str))

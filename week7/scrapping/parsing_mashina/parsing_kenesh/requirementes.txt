@@ -1,0 +1,6 @@
+requests
+beautifulsoup4
+lxml
+
+
+pip install -r requirementes.txt

@@ -91,11 +91,25 @@
 # b = tuple()
 # # 2) count(element) -- возвращает число вхождений этого элемента в кортеж
 # print(a.count(1))  #13   True - считается за единицу
-labels = ['rollsroyce', 'honda', 'gmc']
-for i in labels:
-    if i == 'rollsroyce':
-        print(f'i like brand {i}')
-    elif i == 'honda':
-        print(f'i like brand {i}')
-    else:
-        print(f'i like brand {i}')
+# labels = ['rollsroyce', 'honda', 'gmc']
+# for i in labels:
+#     if i == 'rollsroyce':
+#         print(f'i like brand {i}')
+#     elif i == 'honda':
+#         print(f'i like brand {i}')
+#     else:
+#         print(f'i like brand {i}')
+
+
+
+
+n = int(input())
+if 5 <= n <= 20:
+    word = 'коров'
+elif n % 10 == 1:
+    word = 'корова'
+elif n % 10 == 2 or n % 10 == 3 or n % 10 == 4:
+    word = 'коровы'
+else:
+    word = 'коров'
+print(f'На лугу пасется {n} {word}')

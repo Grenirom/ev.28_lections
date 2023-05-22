@@ -77,13 +77,13 @@ JSON - JavaScript Object Notation
 #     dict_ = json.load(file)
 #     print(dict_, type(dict_))
 #----------------------------------------------
-from urllib.request import urlopen
-import json
-import pprint as pp
+# from urllib.request import urlopen
+# import json
+# import pprint as pp
 
-url = 'https://randomuser.me/api/'
-json_data = urlopen(url)
-# print(json_data, dir(json_data))
+# url = 'https://randomuser.me/api/'
+# json_data = urlopen(url)
+# # print(json_data, dir(json_data))
 
-dict_ = json.load(json_data)
-pp.pprint(dict_)
+# dict_ = json.load(json_data)
+# pp.pprint(dict_)

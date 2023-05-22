@@ -80,3 +80,78 @@ any - возвращает True, если хотя бы один элемент 
 # from statistics import mean
 
 # print(f'Average len of passwords: {mean(len(x) for x in res)}')
+#----------------------------------------------------------------------------
+#                                  TASK 11
+# a = range(1,50)
+# result = list(map(lambda x: 'Fizz' if x % 3 == 0 else 'Buzz', a))
+# print(result)
+#----------------------------------------------------------------------------
+#                                  TASK 12
+# import functools
+# list_ = [1,2,3,4,5,6,7]
+# res = functools.reduce(lambda x, y: x if x > y else y, list_)
+# print(res)
+#-----------------------------------------------------------------------
+#                                  TASK 13
+# import functools
+# list_ = [1,2,3,4,5,6,7]
+# res = functools.reduce(lambda x, y: x if x < y else y, list_)
+# print(res)
+#----------------------------------------------------------------
+#                                  TASK 14
+# string = 'hello'
+# res = tuple(enumerate(string))
+# print(res)
+#-----------------------------------------------------------------
+#                                  TASK 15
+# list_ = [-7, -2, 12, 32, 432, 23, 37, 11, 76, 0, -23, 45, -32, -56]
+# res = list(map(lambda x: abs(x), list_))
+# print(res)
+#-----------------------------------------------------------
+#                                  TASK 16
+# list_ = ['hello', 123]
+# res = list(map(lambda x: type(x), list_))
+# print(res)
+#------------------------------------------------------
+#                                  TASK 17
+# names = ['rauchel','john','peter','jessica','steven123','dandy34','kamest','potter']
+# res = list(map(lambda x:x + ' ' + 'Python' if len(x) > 5 else x+ ' ' + 'JavaScript', names))
+# print(res)
+#--------------------------------------------------------
+#                                   TASK 18
+# list_ = ['123hello@gmail.com', '123', 'hello']
+# check = '@gmail.com'
+# res = list(map(lambda x: x if check in x else 'Not valid email', list_))
+# print(res)
+#-----------------------------------------------------
+#                                  TASK 19
+# string = 'hello'
+# res = tuple(enumerate(string,1))
+# print(res)
+#---------------------------------------------------
+#                                  TASK 20
+# list1 = ['M', 'A', 'K', 'E', 'R', 'S'] 
+# list2 = [236, 54, 33, 21, 89, 1]
+# res = list(zip(list1, list2))
+# print(res)
+#-------------------------------------------------------------------
+#                               TASK 21
+# list_ = [-7, -2, 12, 32, 432, 23, 37, 11, 76, 0, -23, 45, -32, -56]
+# res2 = []
+# res1 = list(filter(lambda x: x if x > 0 else res2.append(x), list_))
+# res3 = list(zip(res1, res2))
+# print(res3)
+#-----------------------------------------------------------
+#                               TASK 22
+# list_ = [0.334, 23.3443, 43.4, -13.44, 22.03, -11.033, 267.993, -3.24] 
+# res=list(map(lambda x:round(x**2,3),list_)) 
+# print(res)
+#--------------------------------------------------
+#                               TASK 23
+# import functools
+# list_ = ['a', 'n', 'n', 'a']
+# res = functools.reduce(lambda x, y: x + y, list_)
+# if res == res[::-1]:
+#     print('YES')
+# else:
+#     print('NO')

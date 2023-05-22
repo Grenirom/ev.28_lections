@@ -83,3 +83,14 @@
 # a = list(range(1, 31, 2))
 # print(a)
 
+#-----------------------------------
+# try:
+#     cash = int(input())
+#     if cash < 0:
+#         print('Сумма не может быть отрицательной! ')
+#     else:
+#         print(cash)
+# except ValueError:
+#     raise ValueError
+#----------------------------------------------
+# q
