@@ -173,3 +173,4 @@
 # print(fact(6))
 # print(fact(4))
 
+print(dir(list))

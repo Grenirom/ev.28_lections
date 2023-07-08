@@ -56,30 +56,34 @@
 # else:
 #     print('NO')
 #---------------------------------------------------------------------------------------------
-# import random
-# ls = ['Plov', 'Beshbarmak', 'Kuurdak', 'Lagman', 'Oromo']
-# p = 0
-# b = 0
-# k = 0
-# l = 0
-# o = 0
-# for x in range(0, 1_000_000):
-#     meal = random.choice(ls)
-#     # print(meal)
-#     if meal.lower() == 'plov':
-#         p += 1
-#     elif meal.lower() == 'beshbarmak':
-#         b += 1
-#     elif meal.lower() == 'kuurdak':
-#         k += 1
-#     elif meal.lower() == 'lagman':
-#         l += 1
-#     else:
-#         o += 1
+import random
+ls = ['Plov', 'Beshbarmak', 'Kuurdak', 'Lagman', 'Oromo']
+p = 0
+b = 0
+k = 0
+l = 0
+o = 0
+for x in range(0, 1_000_000):
+    meal = random.choice(ls)
+    # print(meal)
+    if meal.lower() == 'plov':
+        p += 1
+    elif meal.lower() == 'beshbarmak':
+        b += 1
+    elif meal.lower() == 'kuurdak':
+        k += 1
+    elif meal.lower() == 'lagman':
+        l += 1
+    else:
+        o += 1
 
-# print('Результаты голодных игр:')
+print('Результаты голодных игр:')
 # print(f'Plov: {p}\nBeshbarmak: {b}\nKuurdak: {k}\nLagman: {l}\nOromo: {o}')
-
+dict_ = {'Plov': p, 'Beshbarmak': b, 'Kuurdak': k, 'Lagman': l, 'Oromo': o}
+# print(dict_)
+res = sorted(dict_.items(), key=lambda x: x[1], reverse=True)
+print(res)
+print(f'Победило блюдо: {res[0]} и оно набрало: {res[1]} очков!')
 #--------------------------------------------------------------------------------------------
 # Given an array of integers nums and an integer target, 
 # return indices of the two numbers such that they add up to target.
@@ -90,13 +94,13 @@
 # 2) nums = [4,11,2,5,1,6]
 # tagret = 8
 
-nums = [4,11,2,5,1,6]
-target = 8
-for i in range(0, len(nums)):
-    # print(i)
-    # print(nums[i])
-    num = target - nums[i]
-    if num in nums:
-        if num != nums[i]:
-            print(f'ответ: {i}, {nums.index(num)}') #nums.index - способ нахождение индекса
-            break
+# nums = [4,11,2,5,1,6]
+# target = 8
+# for i in range(0, len(nums)):
+#     # print(i)
+#     # print(nums[i])
+#     num = target - nums[i]
+#     if num in nums:
+#         if num != nums[i]:
+#             print(f'ответ: {i}, {nums.index(num)}') #nums.index - способ нахождение индекса
+#             break

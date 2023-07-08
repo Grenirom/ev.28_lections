@@ -1,0 +1,63 @@
+       Пошаговая инструкция по созданию бота.
+       1) создать директорию и создать в ней папку где будет сам код
+       2) установить окружение, и активировать его (python3 -m venv venv ) для активации окружения (source venv/bin/activate)
+       3) установить pyTelegramBotAPI   (pip install pyTelegramBotAPI)
+       4) в VS code:  а) активировать окружение в терминале b) import telebot c) from telebot import types - если нужны кнопки
+       5) в телеге, в botfather получить уникальный токен и создать имя для бота
+       6)создать папку и закинуть туда токен (чтобы в случае если захочу выложить проект на GitHub никто не мог видеть мой токен)
+       7) импортировать токен в основной файл
+       8)через декоратор @bot.message_handler(commands=['start']) указываем то, на какую команду бот будет реагировать
+       9)пишем функцию которая будет отвечать за ответ бота на "start" команду, и в ней пишем приветствие (для удобства можно занести id чата и имяпользователя в переменные) !!! в каждой функции нужно будет указывать переменную с id чата!!!
+       10)РАБОТА СО СТИКЕРАМИ И ОТВЕТОМ НА ТЕКСТ:
+       a) указываем декоратор
+       b) пишем функцию, но вместо 'commands=' указываем "content_types"
+       c) если нужно работать со стикерами то указываем 'sticker'
+       d) если с текстом, то 'text'
+       11)
+
+
+
+
+
+
+       ) комвндв bot.pollling() - запускает бота
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       @bot.message_handler(commands=['start', 'hello'])
+def start_messasge(message):
+    chat_id = message.chat.id
+    userName = message.from_user.first_name
+    bot.send_message(chat_id, f'Hello {userName}!')
+
+@bot.message_handler(content_types=['sticker', 'text'])
+def send_striker(message):
+    chat_id = message.chat.id
+    if message.text.lower() == 'hello':
+        bot.send_message(chat_id, 'Hello, my dear friend!')
+    else:
+        bot.send_sticker(chat_id, 'CAACAgIAAxkBAAEIs8RkRgABnU8KvaB7jc4-AAEuGMSbxQZaAAI2DwACHsAJStF09kSTVS5ALwQ')
+        

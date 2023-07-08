@@ -108,39 +108,50 @@
 # locals -- функция которая возвращает все имена внутри глобальной области видимости и локальной
 #---------------------------------------------------------------------------------------
 
-def counter():
-    num = 0
-    def increment():
-        nonlocal num
-        num += 1
-        return num
-    return increment
+# def counter():
+#     num = 0
+#     def increment():
+#         nonlocal num
+#         num += 1
+#         return num
+#     return increment
 
-def showStats(heroes, mobs):
-    print()
-    print(f'John Snow, ты убил: \n\tгероев: {heroes} \n\tмобов: {mobs}')
-    print()
+# def showStats(heroes, mobs):
+#     print()
+#     print(f'John Snow, ты убил: \n\tгероев: {heroes} \n\tмобов: {mobs}')
+#     print()
 
 
-counter_heroes = counter()
-counter_mobs = counter()
-heroes = 0
-mobs = 0
-print('Приветствую вас, король севера John Snow, в вестеросе!')
+# counter_heroes = counter()
+# counter_mobs = counter()
+# heroes = 0
+# mobs = 0
+# print('Приветствую вас, король севера John Snow, в вестеросе!')
 
-while True:
-    print('Тебе доступны следующие дейтвия:')
-    print('1-убить Ланистера, 2-убить Белого ходока, 3-статистикa, 4-выйти из игры')
-    choice = input('Введите выбранное действие:').strip()
-    if choice == '1':
-        heroes = counter_heroes()
-        print('Вы обезглавили Ланистера!')
-    elif choice == '2':
-        mobs = counter_mobs()
-        print('Вы убили белого ходока!')
-    elif choice == '3':
-        showStats(heroes, mobs)
-    elif choice == '4':
-        print('Пока Пока!')
-        break
-    
+# while True:
+#     print('Тебе доступны следующие дейтвия:')
+#     print('1-убить Ланистера, 2-убить Белого ходока, 3-статистикa, 4-выйти из игры')
+#     choice = input('Введите выбранное действие:').strip()
+#     if choice == '1':
+#         heroes = counter_heroes()
+#         print('Вы обезглавили Ланистера!')
+#     elif choice == '2':
+#         mobs = counter_mobs()
+#         print('Вы убили белого ходока!')
+#     elif choice == '3':
+#         showStats(heroes, mobs)
+#     elif choice == '4':
+#         print('Пока Пока!')
+#         break
+#--------------------------------
+#                   TASK 1
+def foo():
+    var = 'переменная foo'
+  
+    def bar():
+        var = 'переменная bar'
+        . . .
+ 
+    bar()
+foo()
+print('переменная в foo: ', var)

@@ -1,0 +1,14 @@
+django
+djangorestframework
+pillow
+psycopg2-binary
+python-decouple
+gunicorn
+drf-yasg
+coreapi
+django-filter
+django-rest-passwordreset
+redis
+celery[redis]
+PyJWT
+djangorestframework-simplejwt

@@ -77,19 +77,96 @@
 # get_some_data(1,2,3,4,5, lang='Python', car='bmw')
 #--------------------------------------------------------------------------------------------------
 
-def generate_random_string(len_):
-    import string as s
-    import random
-    # print(s.ascii_letters, s.digits)
-    symbols = s.ascii_letters + s.digits
-    resilt = list(
-        random.choice(s.ascii_letters + s.digits) for i in range(0, len_)
-    ) + list(random.choice(s.punctuation))
-    random.shuffle(resilt)
-    res = random.shuffle(list(resilt))
-    return ''.join(resilt)
+# def generate_random_string(len_):
+#     import string as s
+#     import random
+#     # print(s.ascii_letters, s.digits)
+#     symbols = s.ascii_letters + s.digits
+#     resilt = list(
+#         random.choice(s.ascii_letters + s.digits) for i in range(0, len_)
+#     ) + list(random.choice(s.punctuation))
+#     random.shuffle(resilt)
+#     res = random.shuffle(list(resilt))
+#     return ''.join(resilt)
 
-print(generate_random_string(57))
-print(generate_random_string(575))
-print(generate_random_string(517))
-print(generate_random_string(157))
+# print(generate_random_string(57))
+# print(generate_random_string(575))
+# print(generate_random_string(517))
+# print(generate_random_string(157))
+
+
+
+# users = [
+#   { 'name': 'Jack', 'age': 35, 'work': 'IT-backend developer' },
+#   { 'name': 'Helen', 'age': 35, 'work': 'Nurse' },
+#   { 'name': 'Bob', 'age': 35, 'work': 'Driver' },
+#   { 'name': 'Jessica', 'age': 35, 'work': 'IT-frontend developer' },
+#   { 'name': 'Helga', 'age': 35, 'work': 'IT-HR' }
+# ]
+# def func15(users):
+#     ls = []
+#     for dicts in users:
+#         if 'IT' in str(dicts):
+#             ls.append(f'{dicts["name"]}, скидки в магазине компьютерной техники!\n')
+#     h = ''.join(ls)
+#     return h
+    
+
+
+# print(func15(users))
+
+
+# def func18(ls):
+#     intls = []
+#     strls = []
+#     for item in ls:
+#         if type(item) == str:
+#             strls.append(item)
+#         elif type(item) == int:
+#             intls.append(item)
+#     return strls, intls
+# print(func18(['fxvxdvzd', 123, '124311', 'sefsfse', 3432]))
+
+
+
+
+
+
+
+
+
+products = [
+  {
+    'title': 'Samsung S10', 
+    'price': 800, 
+    'count': 6, 
+    'category': 'samsung'},
+  {
+    'title': 'iPhone 13 Pro', 
+    'price': 1200, 
+    'count': 9, 
+    'category': 'apple'},
+  {
+    'title': 'Xiaomi Mi 10', 
+    'price': 500, 
+    'count': 2, 
+    'category': 'xiaomi'},
+  {
+    'title': 'Samsung S9', 
+    'price': 600, 
+    'count': 4, 
+    'category': 'samsung'},
+  {
+    'title': 'iPhone 11', 
+    'price': 850, 
+    'count': 1, 
+    'category': 'apple'}
+]
+def func20(a:list,b:str)->list: 
+    result=list() 
+    for i in a: 
+        if b.lower() in i['title'].lower(): 
+            result.append(i) 
+    return result
+
+func20(products, 'i')

@@ -1,0 +1,53 @@
+h2 {
+
+border: solid 5px yellow;
+}
+
+*{
+    color: brown;
+}
+
+.super{
+    color: blueviolet;  
+}
+
+#super_id{
+    background-color: chartreuse;
+}
+
+.span{
+    font-weight: 800;
+    color: yellowgreen;
+}   
+
+#test{
+    background-color: aquamarine;
+    width: 50%;
+    height: 50%;
+} 
+.parent{
+    height: 50vh;
+    width: 50vw;
+    background-color: red;
+    margin-left: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+
+}
+div{
+    cursor: pointer;
+
+}
+
+dic:hover {
+    background: yellow;
+
+}
+a:active{
+    color: red;
+}
+
+a:visited{
+    color: green;
+}

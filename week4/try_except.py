@@ -80,5 +80,17 @@
 # dict_ = {'a': 1, 'b': 2, 'c': 3}
 # print(dict_[e])
 
-a = list(range(1, 31, 2))
-print(a)
+# a = list(range(1, 31, 2))
+# print(a)
+
+#-----------------------------------
+# try:
+#     cash = int(input())
+#     if cash < 0:
+#         print('Сумма не может быть отрицательной! ')
+#     else:
+#         print(cash)
+# except ValueError:
+#     raise ValueError
+#----------------------------------------------
+# q
