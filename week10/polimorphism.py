@@ -86,3 +86,18 @@
 # print()
 # print(b.fact())
 # print(b.area())
+
+class English:
+    def greeting(self):
+        print ("Hello")
+
+class French:
+    def greeting(self):
+        print ("Bonjour")
+
+    def intro(language):
+        language.greeting()
+
+john = English()
+gerard = French()
+gerard.intro()

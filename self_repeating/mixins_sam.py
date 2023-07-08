@@ -40,27 +40,50 @@
 # print(c.get_info()) 
 #----------------------------------------------------------
 #                   TASK 5
-class Square:
-    def __init__(self, side):
-        self.side = side
-    def get_area(self):
-        return self.side ** 2
-class Triangle:
-    def __init__(self, height, base):
-        self.height = height
-        self.base = base
-    def get_area(self):
-        return (self.base * self.height) / 2
-class Pyramid(Triangle, Square):
-    def __init__(self, height, base):
-        super().__init__(height, base)
+# class Square:
+#     def __init__(self, side):
+#         self.side = side
+#     def get_area(self):
+#         return self.side ** 2
+# class Triangle:
+#     def __init__(self, height, base):
+#         self.height = height
+#         self.base = base
+#     def get_area(self):
+#         return (self.base * self.height) / 2
+# class Pyramid(Triangle, Square):
+#     def __init__(self, height, base):
+#         super().__init__(height, base)
 
-    def get_volume(self):
-        return int((1/3) * self.base ** 2 * self.height)
-obj = Square(3)
-print(obj.get_area())
-obj1 = Triangle(16, 6)
-print(obj1.get_area())
-obj2 = Pyramid(16, 8)
-print(obj2.get_volume())
+#     def get_volume(self):
+#         return int((1/3) * self.base ** 2 * self.height)
+# obj = Square(3)
+# print(obj.get_area())
+# obj1 = Triangle(16, 6)
+# print(obj1.get_area())
+# obj2 = Pyramid(16, 8)
+# print(obj2.get_volume())
 
+#----------------------------------------------------------
+class ExtensionMixin:
+    
+
+
+
+
+
+class Game:
+    def __init__(self, type_, name, extensions):
+        self.type_ = type_
+        self.name = name
+        self.extensions = []
+
+    def get_description(self):
+        return f'{self.name} это инди-игра в жанре песочницы с элементами выживания и открытым миром.'
+    
+    def get_extensions(self):
+        if not self.extensions:
+            return 'Нет подключенных расширений'
+        else:
+            return ' '.join(self.extensions)
+        
